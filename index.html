@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vishnu Gopal - Cybersecurity Enthusiast">
+    <meta name="keywords" content="Cybersecurity, AI Security, Cloud Security, Telecom Product Security">
+    <meta name="author" content="Vishnu Gopal">
+    <title>Vishnu Gopal | Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        header, footer {
+            background-color: #1a1a1a;
+            padding: 10px 20px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00bcd4;
+        }
+
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        main {
+            margin-top: 80px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('cybersecurity-hero.jpg') no-repeat center center / cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: #fff;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #00bcd4;
+            padding: 12px 24px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #0288d1;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #00bcd4;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease;
+        }
+
+        /* About Section */
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            animation: slideIn 1s ease;
+        }
+
+        .skill {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.05);
+        }
+
+        /* Tools Section */
+        .tool-icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .tool-icons img {
+            width: 60px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .tool-icons img:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 10px #00bcd4);
+        }
+
+        /* Contact Section */
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info a {
+            color: #bbb;
+            text-decoration: none;
+            font-size: 18px;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #00bcd4;
+        }
+
+        .contact-info img {
+            width: 24px;
+            height: 24px;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #bbb;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            header {
+                text-align: center;
+            }
+
+            .cta-button {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">Vishnu Gopal</div>
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <h1>Welcome to My Cyber World</h1>
+            <p>Exploring AI Security | Cloud Security | DevSecOps | Telecom Product Security</p>
+            <a href="#about" class="cta-button">Learn More</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>
+                <p>Hi, I'm Vishnu Gopal, a cybersecurity enthusiast with a keen interest in <strong>AI Security</strong>, <strong>Cloud Security</strong>, <strong>DevSecOps</strong>, and <strong>Telecom Product Security</strong>.</p>
+<p>Currently, I am interning at the <strong>National Centre for Communication Security</strong> in Bengaluru (Department of Telecommunications, Government of India), where I explore telecom security innovations.</p>
+<p>Previously, I worked at <strong>Tata Communications Transformation Services</strong> in Chennai.</p>
+<p>In addition to my professional work, I love offering freelance services such as <strong>VAPT assessments</strong>,<strong>incident responding,auditing, and more</strong> please connect with me for further assistance.</p>
+<p>Beyond my professional life, I enjoy playing cricket, exploring new places, and capturing moments through photography. I love binge-watching shows, staying updated with the latest tech trends, and attending events where I can network with like-minded individuals. Exploring new foods and cuisines is one of my passions, and I believe it adds a delightful flavor to life.</p>
+
+            </p>
+            <p>
+                I'm familiar with tools and technologies like Windows, Kali Linux, Nmap, Burp Suite, and GNS3, among others. I’m always open to 
+                discussions and new ideas—connect with me on LinkedIn!
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2>My Skills & Interests</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <h3>Cybersecurity</h3>
+                    <p>Incident Response, Security Operations, and more.</p>
+                </div>
+                <div class="skill">
+                    <h3>AI Security</h3>
+                    <p>Exploring the intersection of artificial intelligence and security.</p>
+                </div>
+                <div class="skill">
+                    <h3>Cloud Security</h3>
+                    <p>Securing cloud infrastructures and applications.</p>
+                </div>
+                <div class="skill">
+                    <h3>DevSecOps</h3>
+                    <p>Integrating security into development and operations workflows.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+<section id="tools" class="tools">
+    <h2>Tools & Technologies</h2>
+    <div class="tool-icons">
+        <img src="https://user-images.githubusercontent.com/25181517/186884150-05e9ff6d-340e-4802-9533-2c3f02363ee3.png" alt="Windows Logo">
+        <!-- Official Kali Linux Dragon Logo -->
+        <img src="https://github.com/user-attachments/assets/4cf282d2-b46f-43b7-aab6-19604cc5a683" alt="Kali Linux Dragon Logo">
+        <img src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" alt="Python Logo">
+        <img src="https://user-images.githubusercontent.com/25181517/192107858-fe19f043-c502-4009-8c47-476fc89718ad.png" alt="Rest API Logo">
+        <img src="https://user-images.githubusercontent.com/25181517/183868728-b2e11072-00a5-47e2-8a4e-4ebbb2b8c554.png" alt="CI/CD Logo">
+        <img src="https://user-images.githubusercontent.com/25181517/183911544-95ad6ba7-09bf-4040-ac44-0adafedb9616.png" alt="Microsoft Azure Logo">
+        <img src="https://user-images.githubusercontent.com/25181517/186884153-99edc188-e4aa-4c84-91b0-e2df260ebc33.png" alt="Ubuntu Logo">
+    </div>
+</section>
+
+
+        <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+        <a href="mailto:vishugopalgopal12@gmail.com" class="contact-icon">
+            <img src="https://www.google.com/images/branding/product/2x/gmail_48dp.png" alt="Email Icon">
+            <span>Feel free to drop me an Email!</span>
+        </a>
+        <a href="https://github.com/VVishnuGopalCyberSec" class="contact-icon">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Icon">
+            <span>Check out my Projects on GitHub!</span>
+        </a>
+        <a href="https://www.linkedin.com/in/v-vishnu-gopal-26361817b" class="contact-icon">
+            <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn Icon">
+            <span>Let's connect on LinkedIn!</span>
+        </a>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Vishnu Gopal. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
